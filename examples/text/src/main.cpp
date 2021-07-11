@@ -205,7 +205,12 @@ namespace
 
         bn::vector<bn::sprite_ptr, 32> text_sprites;
         text_generator.generate(0, -text_y_limit, "UTF-8 text", text_sprites);
-        text_generator.generate(0, 0, "UTF-8 characters: áéñÁÉÑ", text_sprites);
+        text_generator.generate(0, 0, , text_sprites);
+       text_generator.generate(0, 32, "私は滑って白くなり、獣のような黒い目が", text_sprites);
+       text_generator.generate(0, 64,"赤くなった。霧のかかった夕日の世界で", text_sprites);
+       text_generator.generate(0, 96," カエルのように目が覚めた。", text_sprites);
+        text_generator.generate(0, 128,"私はオルタという名前", text_sprites);
+        text_generator.generate(0, 160, "のフォームシフトウィザードです！", text_sprites);
         text_generator.generate(0, text_y_limit, "START: go to next scene", text_sprites);
 
         while(! bn::keypad::start_pressed())
