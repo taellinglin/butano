@@ -23,7 +23,7 @@
  * @ingroup other
  */
 #ifndef BN_VERSION_MAJOR
-    #define BN_VERSION_MAJOR 6
+    #define BN_VERSION_MAJOR 7
 #endif
 
 /**
@@ -34,7 +34,7 @@
  * @ingroup other
  */
 #ifndef BN_VERSION_MINOR
-    #define BN_VERSION_MINOR 17
+    #define BN_VERSION_MINOR 0
 #endif
 
 /**
@@ -45,7 +45,7 @@
  * @ingroup other
  */
 #ifndef BN_VERSION_PATCH
-    #define BN_VERSION_PATCH 1
+    #define BN_VERSION_PATCH 0
 #endif
 
 /**

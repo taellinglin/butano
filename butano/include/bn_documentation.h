@@ -1661,10 +1661,23 @@
  * @tableofcontents
  *
  *
- * @section changelog_6_18_0 6.18.0 (next release)
+ * @section changelog_7_0_1 7.0.1 (next release)
+ *
+ * bn::format build fix.
+ *
+ *
+ * @section changelog_7_0_0 7.0.0
+ *
+ * * <a href="https://gvaliente.itch.io/varooom-3d">Varooom 3D</a> source code and assets added.
+ * * Maximum number of active H-Blank effects reduced to 6.
+ * * Common files moved to `common` namespace.
+ *
+ *
+ * @section changelog_6_18_0 6.18.0
  *
  * * Generated items are now `constexpr inline` to avoid being copied to every translation unit.
  * * Sprites EWRAM usage reduced.
+ * * Different type backgrounds sorting fixed.
  *
  *
  * @section changelog_6_17_1 6.17.1
