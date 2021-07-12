@@ -78,14 +78,29 @@ Get the latest Varooom 3D ROMs from [itch.io](https://gvaliente.itch.io/varooom-
 
 ## Also made with Butano
 
-* [GBA-NICCC](https://github.com/GValiente/gba-niccc): Game Boy Advance port of the Atari ST demo STNICCC 2000.
-
-![](docs_tools/images/gba-niccc_1.png) ![](docs_tools/images/gba-niccc_2.png)
-
 * [Feline](https://foopod.itch.io/feline): explore the world as a cat, meet new people, learn new languages, 
 face difficult foes and save your family!
 
 ![](docs_tools/images/feline_title.png) ![](docs_tools/images/feline_gameplay.png)
+
+* [Symbol★Merged](https://copyrat90.itch.io/sym-merged): a puzzle platformer game where you can merge items 
+(symbols) in hands, and use the superpower of the merged symbol.
+
+![](docs_tools/images/symbol_merged_title.png) ![](docs_tools/images/symbol_merged_gameplay.png)
+
+* [Bridge Quest](https://fixxiefixx.itch.io/bridge-quest): find the way to the desert, but beware, 
+because enemies and an evil tree boss will try to stop you!
+
+![](docs_tools/images/bridge_quest_title.png) ![](docs_tools/images/bridge_quest_gameplay.png)
+
+* [Advance! Adventures Of The Math & Logic Club](https://kva64.itch.io/advance-demo-adventures-of-the-math-logic-club): 
+small demo/prototype of a visual novel about joining an ordinary math club.
+
+![](docs_tools/images/advance_amlc_title.png) ![](docs_tools/images/advance_amlc_gameplay.png)
+
+* [GBA-NICCC](https://github.com/GValiente/gba-niccc): Game Boy Advance port of the Atari ST demo STNICCC 2000.
+
+![](docs_tools/images/gba-niccc_1.png) ![](docs_tools/images/gba-niccc_2.png)
 
 
 ## Contact and support

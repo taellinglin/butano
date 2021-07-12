@@ -1446,9 +1446,16 @@
  *
  * @subsection faq_incomplete_type Why I get an incomplete type error when trying to use a Butano class?
  *
- * If you have an incomplete type error it is almost always because of lack of included headers.
+ * If you have an error like these:
  *
- * You can find the header of a Butano class in its documentation page.
+ * @code{.cpp}
+ * error: variable 'bn::regular_bg_ptr bg' has initializer but incomplete type
+ * error: invalid use of incomplete type 'class bn::regular_bg_ptr'
+ * @endcode
+ *
+ * It is almost always because of lack of included headers.
+ *
+ * You can find the header of each Butano class in its documentation page.
  *
  *
  * @subsection faq_containers Why there's std like containers included with Butano?
@@ -1661,7 +1668,13 @@
  * @tableofcontents
  *
  *
- * @section changelog_7_0_1 7.0.1 (next release)
+ * @section changelog_7_1_0 7.1.0 (next release)
+ *
+ * * @ref faq page improved.
+ * * Games made with Butano added to `README.md`.
+ *
+ *
+ * @section changelog_7_0_1 7.0.1
  *
  * bn::format build fix.
  *
