@@ -1591,6 +1591,17 @@
  * Keep in mind that unused colors are also taken into account when deciding if two color palettes are equal or not.
  *
  *
+ * @subsection faq_multiple_8bpp_objects Why everything looks weird when I show two or more backgrounds or sprites with more than 16 colors?
+ *
+ * Since the GBA has only two 256 color palettes (one for sprites and the other for backgrounds),
+ * if you use for example two backgrounds with more than 16 colors,
+ * Butano assumes that they have the same color palette (same colors in the same order).
+ *
+ * So if you are going to show at the same time multiple backgrounds with more than 16 colors,
+ * use the same color palette with all of them (in the same scene of course,
+ * different backgrounds shown in different scenes can have different color palettes).
+ *
+ *
  * @section faq_backgrounds Backgrounds
  *
  *
@@ -1628,6 +1639,23 @@
  * Because of these limitations, you should avoid affine backgrounds whenever possible.
  *
  *
+ * @subsection faq_background_error_grit Why can't I import a regular background with 1024 or less tiles?
+ *
+ * If you get this error when trying to import a regular background with 1024 or less tiles:
+ *
+ * `error: Regular BGs with more than 1024 tiles not supported: 1025`
+ *
+ * Or you get this error when importing an affine background with 256 or less tiles:
+ *
+ * `error: Affine BGs with more than 256 tiles not supported: 257`
+ *
+ * Your image is fine, but <a href=" https://www.coranac.com/projects/grit/">grit</a>
+ * (the tool used by Butano to import images) is generating unneeded extra tiles.
+ *
+ * The only workaround that I know of is reducing detail in your input image until the tiles count of
+ * the generated background is valid.
+ *
+ *
  * @section faq_audio Audio
  *
  *
@@ -1652,9 +1680,7 @@
  *
  * For example, to set the audio mixing rate to 21KHz:
  *
- * @code{.cpp}
- * USERFLAGS := -DBN_CFG_AUDIO_MIXING_RATE=BN_AUDIO_MIXING_RATE_21_KHZ
- * @endcode
+ * `USERFLAGS := -DBN_CFG_AUDIO_MIXING_RATE=BN_AUDIO_MIXING_RATE_21_KHZ`
  *
  * Remember to rebuild your project from scratch after modifying a `Makefile`.
  *
@@ -1668,8 +1694,9 @@
  * @tableofcontents
  *
  *
- * @section changelog_7_1_0 7.1.0 (next release)
+ * @section changelog_7_1_0 7.1.0
  *
+ * * bn::hdma commit fixed.
  * * @ref faq page improved.
  * * Games made with Butano added to `README.md`.
  *
