@@ -722,7 +722,7 @@
  * If you were able to build and run some examples, congrats! Now you can make your own GBA game with Butano.
  * To do that:
  * * Copy the template project located in `/path/to/butano/template/` to a path without spaces nor weird characters.
- * * Change the ROM title, the path in which Butano is located and more in the `Makefile` file.
+ * * Change the ROM title, the path in which Butano is located and more in the `Makefile`.
  * * `cd` to the new folder.
  * * Type `make -j#cpu_cores#` again.
  *
@@ -767,13 +767,19 @@
  *
  * Shows how to play music and sound effects with Butano.
  *
- * <td> @ref blending
+ * <td> **Audio player**
+ *
+ * @image html examples_audio_player.png
+ *
+ * Basic audio player example.
+ *
+ * <tr><td> @ref blending
  *
  * @image html examples_blending.png
  *
  * Demonstrates usage of transparency, intensity and fade blending.
  *
- * <tr><td> @ref camera
+ * <td> @ref camera
  *
  * @image html examples_cameras.png
  *
@@ -785,13 +791,13 @@
  *
  * Shows how to sleep and reset the GBA among other things.
  *
- * <td> **Dynamic affine background**
+ * <tr><td> **Dynamic affine background**
  *
  * @image html examples_dynamic_affine_bg.png
  *
  * Basic dynamic affine background example.
  *
- * <tr><td> **Dynamic regular background**
+ * <td> **Dynamic regular background**
  *
  * @image html examples_dynamic_regular_bg.png
  *
@@ -801,15 +807,15 @@
  *
  * @image html examples_external_tool.png
  *
- * Shows how to call an external tool from the project's Makefile.
+ * Shows how to call an external tool from the project's `Makefile`.
  *
- * <td> @ref green_swap
+ * <tr><td> @ref green_swap
  *
  * @image html examples_green_swap.png
  *
  * See how it looks this undocumented graphic effect.
  *
- * <tr><td> @ref keypad
+ * <td> @ref keypad
  *
  * @image html examples_keypad.png
  *
@@ -821,13 +827,13 @@
  *
  * Multiplayer communication through a link cable.
  *
- * <td> @ref log
+ * <tr><td> @ref log
  *
  * @image html examples_log.png
  *
  * Integration of emulator logging into Butano.
  *
- * <tr><td> **Mode 7**
+ * <td> **Mode 7**
  *
  * @image html examples_mode_7.png
  *
@@ -839,13 +845,13 @@
  *
  * Sprites and backgrounds mosaic effects.
  *
- * <td> @ref palette
+ * <tr><td> @ref palette
  *
  * @image html examples_palettes.png
  *
  * Showcases multiple color palette effects.
  *
- * <tr><td> **Flat polygons**
+ * <td> **Flat polygons**
  *
  * @image html examples_polygons.png
  *
@@ -857,13 +863,13 @@
  *
  * Basic code blocks profiling.
  *
- * <td> @ref regular_bg
+ * <tr><td> @ref regular_bg
  *
  * @image html examples_regular_bgs.png
  *
  * Shows how to use regular backgrounds with Butano.
  *
- * <tr><td> @ref rumble
+ * <td> @ref rumble
  *
  * @image html examples_rumble.png
  *
@@ -875,13 +881,13 @@
  *
  * Demonstrates usage of one affine matrix for multiple sprites.
  *
- * <td> @ref sprite
+ * <tr><td> @ref sprite
  *
  * @image html examples_sprites.png
  *
  * Simple sprites examples.
  *
- * <tr><td> @ref sram
+ * <td> @ref sram
  *
  * @image html examples_sram.png
  *
@@ -893,13 +899,13 @@
  *
  * Showcase of Butano sprite text rendering.
  *
- * <td> **Textured polygons**
+ * <tr><td> **Textured polygons**
  *
  * @image html examples_texture_polygons.png
  *
  * Showcases textured polygons rendering with sprites.
  *
- * <tr><td> @ref window
+ * <td> @ref window
  *
  * @image html examples_windows.png
  *
@@ -1700,6 +1706,17 @@
  * @tableofcontents
  *
  *
+ * @section changelog_7_3_0 7.3.0 (next release)
+ *
+ * * bn::sprite_text_generator now can plot multiple 16x16 variable width characters in a single sprite.
+ * * bn::sprite_text_generator IWRAM usage reduced.
+ * * Third party libraries to link can be specified in the project's `Makefile`.
+ * * Project's `Makefile` allows to build source files generated with an external tool.
+ * See the `external_tool` example to learn how to do it.
+ * * `butano-audio-tool.py` generates a list of all available music and sound items with their name.
+ * * `audio_player` example added.
+ *
+ *
  * @section changelog_7_2_0 7.2.0
  *
  * * bn::regular_bg_map_cell_info and bn::affine_bg_map_cell_info added.
@@ -1807,7 +1824,7 @@
  *
  * @section changelog_6_11_0 6.11.0
  *
- * * An external tool can be called from the project's Makefile.
+ * * An external tool can be called from the project's `Makefile`.
  * See the `external_tool` example to learn how to call it.
  * * Affine background tiles offset optimized.
  * * Big numbers to string conversion optimized.
@@ -1945,7 +1962,7 @@
  *
  * * bn::sprite_ptr::put_below, bn::regular_bg_ptr::put_below and bn::affine_bg_ptr::put_below added.
  * * H-Blank effects IWRAM usage reduced.
- * * butano-graphics-tool.py errors reporting improved.
+ * * `butano-graphics-tool.py` errors reporting improved.
  *
  *
  * @section changelog_5_1_0 5.1.0
@@ -1956,7 +1973,7 @@
  * * Some methods to indicate if a background or a background map are big or not have been added.
  * * bn::calculate_sin_lut_value precision improved.
  * * @ref faq page added.
- * * butano-graphics-tool.py now uses all CPU cores.
+ * * `butano-graphics-tool.py` now uses all CPU cores.
  * * Missing third party license files included.
  *
  *

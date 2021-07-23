@@ -62,12 +62,12 @@ LDFLAGS     =	-g $(ARCH) -Wl,-Map,$(notdir $*.map)
 #---------------------------------------------------------------------------------------------------------------------
 # Any extra libraries we wish to link with the project:
 #---------------------------------------------------------------------------------------------------------------------
-LIBS        := -lmm
+LIBS        := -lmm $(USERLIBS)
 
 #---------------------------------------------------------------------------------------------------------------------
 # List of directories containing libraries, this must be the top level containing include and lib directories:
 #---------------------------------------------------------------------------------------------------------------------
-LIBDIRS     :=	$(LIBBUTANOABS) $(LIBBUTANOABS)/hw/3rd_party/libtonc $(LIBGBA)
+LIBDIRS     :=	$(LIBBUTANOABS) $(LIBBUTANOABS)/hw/3rd_party/libtonc $(LIBGBA) $(USERLIBDIRS)
 
 #---------------------------------------------------------------------------------------------------------------------
 # List of directories containing all butano source files:
@@ -147,10 +147,14 @@ export LIBPATHS         :=  $(foreach dir,$(LIBDIRS),-L$(dir)/lib)
 
 .PHONY: $(BUILD) clean
  
-#---------------------------------------------------------------------------------------------------------------------
-$(BUILD):
-	@[ -d $@ ] || mkdir -p $@
+#---------------------------------------------------------------------------------
+all:
+	@[ -d $(BUILD) ] || mkdir -p $(BUILD)
 	@$(EXTTOOL)
+	@$(MAKE) --no-print-directory $(BUILD)
+	
+#---------------------------------------------------------------------------------
+$(BUILD):
 	@$(PYTHON) -B $(LIBBUTANOABS)/tools/butano-audio-tool.py --audio="$(AUDIO)" --build=$(BUILD)
 	@$(PYTHON) -B $(LIBBUTANOABS)/tools/butano-graphics-tool.py --graphics="$(GRAPHICS)" --build=$(BUILD)
 	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
@@ -158,7 +162,7 @@ $(BUILD):
 #---------------------------------------------------------------------------------------------------------------------
 clean:
 	@echo clean ...
-	@rm -fr $(BUILD) $(TARGET).elf $(TARGET).gba 
+	@rm -fr $(BUILD) $(TARGET).elf $(TARGET).gba $(USERBUILD)
 
 #---------------------------------------------------------------------------------------------------------------------
 else
